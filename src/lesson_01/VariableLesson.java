@@ -11,5 +11,12 @@ public class VariableLesson {
         System.out.println(Integer.MIN_VALUE);
         System.out.println(Long.MAX_VALUE);
         System.out.println(Long.MIN_VALUE);
+
+        float my_num_float = 3.14f;
+        double my_num_double = 3.14D;
+
+        final long my_num_long = 10L;
+        my_num_long = 11L;
+
     }
 }
