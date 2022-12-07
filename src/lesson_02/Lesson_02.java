@@ -1,3 +1,5 @@
+package lesson_02;
+
 public class Lesson_02 {
     public static void main(String[] args) {
         int my_num1 = 5;
@@ -6,7 +8,7 @@ public class Lesson_02 {
         int result2 = my_num1 * my_num2;
         int result3 = my_num1 / my_num2;
         int result4 = my_num1 % my_num2;
-        float result5 = (5.0f/2.0f);
+        float result5 = (5/2f);
 
         System.out.println("The result 1 is " + result1);
         System.out.printf("The result 2 is %d\n", result2);
