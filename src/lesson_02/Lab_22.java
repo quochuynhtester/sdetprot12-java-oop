@@ -7,8 +7,7 @@ public class Lab_22 {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Pls input a number: ");
-
-        float result = scanner.nextFloat() % 2f;
+        int result = scanner.nextInt() % 2;
 
         if (result == 0){
             System.out.println("This is even number");
