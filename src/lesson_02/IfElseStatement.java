@@ -7,7 +7,7 @@ public class IfElseStatement {
 //  ngay mai ko mua thi di xem phim, mua thi o nha nau an
 
         System.out.println("chieu ngu day");
-        System.out.println("nhin ra cua so.");
+        System.out.println("nhin ra cua so");
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Thoi tiet hom nay la: ");
@@ -22,8 +22,8 @@ public class IfElseStatement {
        }
        else{
            System.out.println("thi di xem phim");
-           System.out.println("xuong nau do an");
-           System.out.println("an toi");
+           System.out.println("di thay do");
+           System.out.println("lay xe");
        }
 
 

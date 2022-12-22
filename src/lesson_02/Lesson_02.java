@@ -2,6 +2,7 @@ package lesson_02;
 
 public class Lesson_02 {
     public static void main(String[] args) {
+
         int my_num1 = 5;
         int my_num2 = 2;
         int result1 = my_num1 + my_num2;

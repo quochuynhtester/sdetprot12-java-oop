@@ -2,6 +2,7 @@ package lesson_01;
 
 public class VariableLesson {
     public static void main(String[] args) {
+
         short my_num = 128;
         System.out.println(Byte.MAX_VALUE);
         System.out.println(Byte.MIN_VALUE);
