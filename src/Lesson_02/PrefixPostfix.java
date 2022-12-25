@@ -1,6 +1,6 @@
-package lesson_02;
+package Lesson_02;
 
-public class prefix_postfix {
+public class PrefixPostfix {
     public static void main(String[] args) {
 
         int a = 1;
