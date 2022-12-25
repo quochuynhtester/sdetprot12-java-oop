@@ -1,6 +1,6 @@
-package lesson_02;
+package Lesson_02;
 
-public class Lesson_02 {
+public class Lesson02 {
     public static void main(String[] args) {
 
         int my_num1 = 5;
