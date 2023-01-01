@@ -23,16 +23,12 @@ public class Lab_4 {
             System.out.print("Pls input your number: ");
             Scanner scanner1 = new Scanner(System.in);
             int input = scanner1.nextInt();
-            final int randomNumber = getARandomNumber();
 
             if (input == 1) {
-                myArrayList.add(randomNumber);
-                System.out.println(randomNumber);
+                myArrayList.add(getRandomNumber());
             }
             if (input == 2) {
-                for (int index = 0; index < myArrayList.size(); index++) {
-                    System.out.println(myArrayList.get(index));
-                }
+                System.out.println(myArrayList.toString());
             }
             if (input == 3) {
                 int min = myArrayList.get(0);
@@ -41,7 +37,7 @@ public class Lab_4 {
                         min = myArrayList.get(index);
                     }
                 }
-                System.out.println("min is " + min);
+                System.out.println("Min is " + min);
             }
             if (input == 4) {
                 int max = myArrayList.get(0);
@@ -50,13 +46,12 @@ public class Lab_4 {
                         max = myArrayList.get(index);
                     }
                 }
-                System.out.println("max is " + max);
+                System.out.println("Max is " + max);
             }
             if (input == 5) {
                 System.out.print("Pls input number to search: ");
                 Scanner scanner2 = new Scanner(System.in);
                 int searchNumber = scanner2.nextInt();
-
                 int resultSearch = searchNumber;
 
                 for (int index = 0; index < myArrayList.size(); index++) {
@@ -78,7 +73,7 @@ public class Lab_4 {
         System.out.println("5. Search number");
     }
 
-    public static int getARandomNumber() {
+    public static int getRandomNumber() {
         return new SecureRandom().nextInt(100);
     }
 }
