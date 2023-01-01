@@ -16,53 +16,55 @@ import java.util.Scanner;
 public class Lab_4 {
     public static void main(String[] args) {
 
-        boolean myProgram = true;
+        List<Integer> myArrayList = new ArrayList<>();
 
-        while (myProgram) {
+        for (; ; ) {
             printMenu();
             System.out.print("Pls input your number: ");
             Scanner scanner1 = new Scanner(System.in);
             int input = scanner1.nextInt();
-            List<Integer> myArrayList = new ArrayList<>();
+            final int randomNumber = getARandomNumber();
 
             if (input == 1) {
-                myArrayList.add(getARandomNumber());
-                System.out.println(getARandomNumber());
-            } else if (input == 2) {
-                for (Integer value : myArrayList) {
-                    System.out.println(value);
+                myArrayList.add(randomNumber);
+                System.out.println(randomNumber);
+            }
+            if (input == 2) {
+                for (int index = 0; index < myArrayList.size(); index++) {
+                    System.out.println(myArrayList.get(index));
                 }
-            } else if (input == 3) {
+            }
+            if (input == 3) {
                 int min = myArrayList.get(0);
-                for (Integer index = 0; index < myArrayList.size(); index++) {
+                for (int index = 0; index < myArrayList.size(); index++) {
                     if (myArrayList.get(index) < min) {
                         min = myArrayList.get(index);
-                    } else {
-                        System.out.println("No min");
                     }
                 }
-            } else if (input == 4) {
+                System.out.println("min is " + min);
+            }
+            if (input == 4) {
                 int max = myArrayList.get(0);
-                for (Integer index = 0; index < myArrayList.size(); index++) {
+                for (int index = 0; index < myArrayList.size(); index++) {
                     if (myArrayList.get(index) > max) {
                         max = myArrayList.get(index);
-                    } else {
-                        System.out.println("No max");
                     }
                 }
-            } else if (input == 5) {
+                System.out.println("max is " + max);
+            }
+            if (input == 5) {
                 System.out.print("Pls input number to search: ");
                 Scanner scanner2 = new Scanner(System.in);
-                int inputOption5 = scanner2.nextInt();
-                for (Integer index = 0; index < myArrayList.size(); index++) {
-                    if (inputOption5 == myArrayList.get(index)) {
-                        System.out.println(index);
-                    } else {
-                        System.out.println("No search result");
+                int searchNumber = scanner2.nextInt();
+
+                int resultSearch = searchNumber;
+
+                for (int index = 0; index < myArrayList.size(); index++) {
+                    if (myArrayList.get(index) == searchNumber) {
+                        resultSearch = index;
                     }
                 }
-            } else {
-                System.out.println("Pls select the right number in MENU and try again");
+                System.out.println("Index of search number is " + resultSearch);
             }
         }
     }
@@ -77,8 +79,11 @@ public class Lab_4 {
     }
 
     public static int getARandomNumber() {
-        Scanner scanner = new Scanner(System.in);
         return new SecureRandom().nextInt(100);
     }
 }
+
+
+
+
 
